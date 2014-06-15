@@ -51,6 +51,9 @@ results$runsPerGame.1889 <- results$runs.1889 / results$games.1889
 results$runsPerGame.PL1890 <- results$runs.PL1890 / results$games.PL1890
 results$runsPerGame.1891 <- results$runs.1891 / results$games.1891
 
-results$PLImprovement <- results$runsPerGame.PL1890 / ((results$runsPerGame.1889 + results$runsPerGame.1891) / 2)
+results$runsPerGameNonPL <- (results$runs.1889 + results$runs.1891) / (results$games.1889 + results$games.1891)
+
+results$PLImprovement <- results$runsPerGame.PL1890 / results$runsPerGameNonPL
 
 print(paste("Mean PL to non-PL R/G ratio", mean(results$PLImprovement)))
+write.csv(results, "PlayerRecords.csv")
