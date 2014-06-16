@@ -57,3 +57,7 @@ results$PLImprovement <- results$runsPerGame.PL1890 / results$runsPerGameNonPL
 
 print(paste("Mean PL to non-PL R/G ratio", mean(results$PLImprovement)))
 write.csv(results, "PlayerRecords.csv")
+
+sorted.results <- results[with(results, order(-PLImprovement)), ]
+top.player.count <- round(nrow(sorted.results) / 5.6)
+print(paste("Mean PL to non-PL R/G ratio for non-peak players", mean(results$PLImprovement[top.player.count:nrow(sorted.results)])))
