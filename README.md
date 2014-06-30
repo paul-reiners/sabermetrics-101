@@ -72,11 +72,10 @@ I need to do the following:
 
 So here is a plot of league ERAs:
 
-![League ERAs][1]
+![League ERAs](https://edxuploads.s3.amazonaws.com/1402940587400911.png)
 
 Yes, the ERA was significantly higher for the PL.  So you could say the pitching was worse in the PL.  Or is this caused by the batting being better in the PL?
 
-  [1]: https://edxuploads.s3.amazonaws.com/1402940587400911.png
 
 Handedness in Canadian-born players versus U.S.-born players
 ------------------------------------------------------------
