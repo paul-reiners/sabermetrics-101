@@ -11,7 +11,7 @@ In the "Different Eras IV" video, Professor Andres asked
 
 Here is a zoomed-in plot showing this:
 
-![enter image description here][1]
+![runs per game league plot](https://edxuploads.s3.amazonaws.com/14029396968096377.png)
 
 I decided to investigate this question.  Recall that the Players League lasted for only one year, 1890.  I thought that the reason might be that the players in the Players League were simply better than the players in the other leagues.  To test this hypothesis, I did the following:
 
@@ -44,8 +44,6 @@ I encourage people to look at my code and let me know if you find any problems o
 
 My next task will be to establish whether PL players had higher R/G than non-PL players on average.
 
-
-  [1]: https://edxuploads.s3.amazonaws.com/14029396968096377.png
   
 Perhaps the problem was that the pitching wasn't so hot?
 
