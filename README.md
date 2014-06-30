@@ -1,3 +1,11 @@
+Sabermetrics 101 Questions
+==========================
+
+This is a set of questions I looked at while taking [BUx: SABR101x Sabermetrics 101: Introduction to Baseball Analytics](https://www.edx.org/course/bux/bux-sabr101x-sabermetrics-101-1558#.U7Gh8vldUuc), taught by Professor Andy Andres.
+
+1. Why did the Players League have so many R/G?
+2. Do Canadian-born baseball players use a bat like they use a hockey stick?
+
 Why did the Players League have so many R/G?
 --------------------------------------------
 In the "Different Eras IV" video, Professor Andres asked
