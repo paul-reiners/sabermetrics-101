@@ -1,6 +1,6 @@
 # Author: Paul Reiners
 
-player.records <- read.csv("./data/player_records.csv", stringsAsFactors = FALSE)
+player.records <- read.csv("./data/all_batting_player_records.csv", stringsAsFactors = FALSE)
 players <- data.frame(unique(player.records$playerID))
 colnames(players) <- c("playerID")
 
@@ -23,6 +23,7 @@ isThreeYearPLPlayer <- player.records$playerID %in% threeYearPLPlayers
 player.records <- player.records[isThreeYearPLPlayer,]
 
 nrow <- length(threeYearPLPlayers)
+print(paste("Number of three year PL players:", nrow))
 zeroes <- rep.int(0, 3 * nrow)
 runs <- matrix(zeroes, nrow, 3)
 games <- matrix(zeroes, nrow, 3)
@@ -56,7 +57,7 @@ results$runsPerGameNonPL <- (results$runs.1889 + results$runs.1891) / (results$g
 results$PLImprovement <- results$runsPerGame.PL1890 / results$runsPerGameNonPL
 
 print(paste("Mean PL to non-PL R/G ratio", mean(results$PLImprovement)))
-write.csv(results, "PlayerRecords.csv")
+write.csv(results, "three_year_batting_player_records.csv")
 
 sorted.results <- results[with(results, order(-PLImprovement)), ]
 top.player.count <- round(nrow(sorted.results) / 5.6)
