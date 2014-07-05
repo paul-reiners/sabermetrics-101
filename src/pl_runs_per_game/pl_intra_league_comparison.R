@@ -1,6 +1,6 @@
 # Author: Paul Reiners
 
-player.records <- read.csv("./data/all_batting_player_records.csv", stringsAsFactors = FALSE)
+player.records <- read.csv("./data/batting.csv", stringsAsFactors = FALSE)
 player.records$runsPerGame <- NULL
 
 # Did any player in 1890 move from PL to non-PL league or vice-versa?
