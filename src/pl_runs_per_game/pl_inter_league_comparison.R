@@ -48,19 +48,20 @@ threeYearPLPlayers <- data.frame(threeYearPLPlayers)
 colnames(threeYearPLPlayers) <- c("playerID")
 results <- cbind(threeYearPLPlayers, runs, games)
 
-print(paste("1889 PL players R/G:", round(sum(results$runs.1889) / sum(results$games.1889), 2)))
-print(paste("1890 PL players R/G:", round(sum(results$runs.PL1890) / sum(results$games.PL1890), 2)))
-print(paste("1891 PL players R/G:", round(sum(results$runs.1891) / sum(results$games.1891), 2)))
-
 results$runsPerGame.1889 <- results$runs.1889 / results$games.1889
 results$runsPerGame.PL1890 <- results$runs.PL1890 / results$games.PL1890
 results$runsPerGame.1891 <- results$runs.1891 / results$games.1891
 
 results$runs.non.pl <- results$runs.1889 + results$runs.1891
 results$games.non.pl <- results$games.1889 + results$games.1891
-runsPerGameNonPL <- sum(results$runs.non.pl) / sum(results$games.non.pl)
-print(paste("1889/1891 PL players R/G:", round(sum(results$runs.non.pl) / sum(results$games.non.pl), 2)))
+results$runsPerGameNonPL <- results$runs.non.pl / results$games.non.pl
 
 results$PLImprovement <- results$runsPerGame.PL1890 / results$runsPerGameNonPL
 
-print(paste("Mean PL to non-PL R/G ratio", mean(results$PLImprovement)))
+print(paste("1889 PL players R/G:", round(mean(results$runsPerGame.1889), 2)))
+print(paste("1890 PL players R/G:", round(mean(results$runsPerGame.PL1890), 2)))
+print(paste("1891 PL players R/G:", round(mean(results$runsPerGame.1891), 2)))
+
+print(paste("1889/1891 PL players R/G:", round(mean(results$runsPerGameNonPL), 2)))
+
+print(paste("Mean PL to non-PL R/G ratio:", round(mean(results$PLImprovement), 2)))
