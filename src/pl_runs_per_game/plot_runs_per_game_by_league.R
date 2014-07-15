@@ -1,4 +1,4 @@
-league.data <- read.csv("./data/runs_per_game.csv")
+league.data <- read.csv("./data/pl_runs_per_game/runs_per_game.csv")
 colnames(league.data) <- c("year", "league", "games", "runs", "runs.per.game")
 
 library(ggplot2)
